@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block tittle_tag %}
+Home
+{%endblock%}
+{% block content %}
+    <h1>Inicio</h1>
+    <form action="{{url_for('search')}}" method="get">
+        <input type="text" name="username">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if session["username"]%}
+        <h1>Bienvenido {{ session["username"]}} </h1>
+    {% else %}
+        <a href="{{url_for('login')}}">Iniciar Sesion</a>
+    {%endif%}
+
+{% endblock %}

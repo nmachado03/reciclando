@@ -1,0 +1,45 @@
+{% from "_render_elements.html" import render_messages %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciclando - {% block tittle_tag %}{%endblock%}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css' )}}">
+    <script src="https://kit.fontawesome.com/27ff33fad7.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="contenedor">
+            <div class="logo">
+                <a href="{{url_for('home')}}">Reciclando</a>
+            </div>
+            <div class="enlaces">
+                <a href="{{url_for('home')}}">Inicio</a>
+                <a href="{{url_for('geo')}}">Cerca de mi</a>
+                {% if not session["username"] %}
+                <a href="{{url_for('login')}}">Iniciar sesión</a>
+                <a href="{{url_for('signup')}}">Registrarme</a>
+                {%else%}
+                <a href="{{url_for('logout')}}">Cerrar sesión</a>
+                <a href="{{url_for('home')}}">{{session["username"]}}</a>
+                {%endif%}
+            </div>
+            <div class="hmbgr-menu">
+                <i id="hmbrg-menu" class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <section>
+       {{render_messages(messages)}}
+    </section>
+    <main>
+        {% block content %}
+        {%endblock%}
+    </main>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+
+</html>

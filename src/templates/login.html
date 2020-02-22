@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% from "_render_elements.html" import render_input %}
+{% block tittle_tag %}
+LogIn
+{%endblock%}
+{%block content %}
+    <section class="form">
+        <h1>Iniciar sesión</h1>
+        <form method="POST" action="{{ url_for('login')}}">
+            {{ render_input("username", "Nombre de Usuario") }}
+            {{ render_input("password", "Contraseña", "password") }}
+            <input type="submit" value="Ingresar">
+        </form>
+        <p>¿No tienes una cuenta? <a href="{{url_for('signup')}}">Regístrate</a></p>
+    </section>
+{%endblock%}

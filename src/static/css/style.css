@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Menu layout.html */
+header{
+    background: #84817a;
+    width: 100%;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5) ;
+}
+
+nav.contenedor{
+    height: 70px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+.hmbgr-menu{
+    color: #f2f2f2;
+    display: none;
+}
+
+@media screen and (max-width:435px){
+    .hmbgr-menu{
+        display: block;
+    }
+
+    nav .enlaces{
+        position: fixed;
+        background: black;
+        left: 0;
+        top: 70px;
+        width: 70%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-100%);
+    }
+
+    nav .enlaces2{
+        transform: translateX(0%);
+    }
+}
+
+/* Flash Messages */
+
+section ul li.error{
+    color: #c0392b;
+}
+
+section ul li.acierto{
+    color: #27ae60;
+}
+
+/* Forms */
+
+.form a{
+    text-decoration: none;
+    color: #000;
+}
+
+section.form{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form input{
+    min-width:300px;
+    display: block;
+    margin: 20px;
+    padding: 15px 5px;
+    font-size: 18px;
+    font-weight: 400;
+    border-width: 0 0 2px 0;
+    border-color: #b9b9b9 ;
+    outline: none;
+    transition: border-color 0.25s;
+}
+
+.form input:focus{
+    border-color: #555;
+}
+
+.form p a{
+    font-weight: bold;
+}
+
+.form p a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* Map */
+
+.contenedor-map{
+    height: 100vh;
+    width: 100%;
+}
+
+.map{
+    height: 100%;
+    width: 100% ;
+}
+
+
