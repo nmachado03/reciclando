@@ -119,13 +119,14 @@ section.form{
     margin: 0 auto;
 }
 
-.clearfix{
-    clear: both;
-    display: block;
-    content: "";
-}
 
 /* Home page */
+
+.home-page:after{
+    clear: both;
+    content: "";
+    display: block;
+}
 
 .home-page .box-left{ 
     width: 420px;
@@ -143,6 +144,7 @@ section.form{
     background: #2d69b2;
     border-radius: 10px;
     box-shadow: 2px 4px 19px -7px black;
+    margin-top: 20px;
 }
 
 .home-page .box-left .button-home figure img{ 
@@ -169,4 +171,13 @@ section.form{
     color: #fff;
 }
 
+
+.home-page .box-right{
+    float: right;
+    width: 610px;
+}
+
+.home-page .box-right figure{
+    width: 100%;
+}
 
