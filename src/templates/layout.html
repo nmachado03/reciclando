@@ -14,7 +14,7 @@
     <header>
         <nav class="contenedor">
             <div class="logo">
-                <a href="{{url_for('home')}}">Reciclando</a>
+                <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='media/aca-neg.svg')}}" alt=""></a>
             </div>
             <div class="enlaces">
                 <a href="{{url_for('home')}}">Inicio</a>
@@ -41,7 +41,7 @@
 
         <div class="logo-footer">
             <figure>
-                <img src="" alt="">
+                <img src="{{url_for('static', filename='media/aca-neg.svg')}}" alt="">
             </figure>
             <p>Copyrigth © <script>document.write("<span>"+ new Date().getFullYear() + "</span>")</script> Reciclando. Todos los derechos reservados. </p>
         </div>
@@ -55,13 +55,13 @@
             </ul>
         </div>
 
-        <div class="social_media">
+        <div class="social-media">
             <h1>Redes Sociales</h1>
             <ul>
                 <li><a href=""><img src="{{url_for('static', filename='media/github.png')}}" alt=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li><a href=""><img src="{{url_for('static', filename='media/gorjeo.svg')}}" alt=""></a></li>
+                <li><a href=""><img src="{{url_for('static', filename='media/facebook.svg')}}" alt=""></a></li>
+                <li><a href=""><img src="{{url_for('static', filename='media/instagram.svg')}}" alt=""></a></li>
             </ul>
         </div>
 

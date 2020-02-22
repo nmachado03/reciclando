@@ -20,7 +20,7 @@ body{
 
 /* Menu layout.html */
 header{
-    background: #84817a;
+    background: #2d69b2;
     width: 100%;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5) ;
 }
@@ -47,6 +47,19 @@ nav a{
     display: none;
 }
 
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+footer .social-media{
+    
+}
 
 /* Flash Messages */
 
