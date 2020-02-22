@@ -44,29 +44,6 @@ nav a{
     display: none;
 }
 
-@media screen and (max-width:435px){
-    .hmbgr-menu{
-        display: block;
-    }
-
-    nav .enlaces{
-        position: fixed;
-        background: black;
-        left: 0;
-        top: 70px;
-        width: 70%;
-        height: 100vh;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        transform: translateX(-100%);
-    }
-
-    nav .enlaces2{
-        transform: translateX(0%);
-    }
-}
 
 /* Flash Messages */
 
