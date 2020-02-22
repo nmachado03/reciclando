@@ -37,7 +37,35 @@
             {% block content %} {%endblock%}
         </main>
     </div>
-    <footer></footer>
+    <footer>
+
+        <div class="logo-footer">
+            <figure>
+                <img src="" alt="">
+            </figure>
+            <p>Copyrigth © <script>document.write("<span>"+ new Date().getFullYear() + "</span>")</script> Reciclando. Todos los derechos reservados. </p>
+        </div>
+
+        <div class="secciones">
+            <h1>secciones</h1>
+            <ul>
+                <li><a href="{{url_for('home')}}">Inicio</a></li>
+                <li><a href="#dondeLoPongo">¿Donde lo pongo?</a></li>
+                <li><a href="{{url_for('geo')}}">Contenedores</a></li>
+            </ul>
+        </div>
+
+        <div class="social_media">
+            <h1>Redes Sociales</h1>
+            <ul>
+                <li><a href=""><img src="{{url_for('static', filename='media/github.png')}}" alt=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+
+    </footer>
 
 
     <script src="{{url_for('static', filename='js/main.js')}}"></script>
