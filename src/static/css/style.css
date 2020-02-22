@@ -132,4 +132,11 @@ section.form{
     width: 100% ;
 }
 
+/*Home*/
+
+.main-content{
+    width: 1160px;
+    margin: 0 auto;
+}
+
 
