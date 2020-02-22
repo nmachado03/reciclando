@@ -116,4 +116,31 @@ section.form{
     margin: 0 auto;
 }
 
+.clearfix{
+    clear: both;
+    display: block;
+    content: "";
+}
+
+/* Home page */
+
+.home-page .box-left{ 
+    width: 300px;
+    float: left; 
+    padding-top: 230px; 
+}
+
+.home-page .box-left p{ 
+    font-size: 42px; 
+}
+
+.home-page .box-left .button-home{ 
+    width: 300px;
+}
+
+.home-page .box-left .button-home figure img{ 
+    width: 50px;
+    height: auto; 
+}
+
 
