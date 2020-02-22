@@ -144,6 +144,11 @@ section.form{
 .home-page .box-left .button-home figure img{ 
     width: 50px;
     height: auto; 
+    float: left;
+}
+
+.home-page .box-left .button-home input{
+    float: left;
 }
 
 
