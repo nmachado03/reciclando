@@ -27,9 +27,7 @@
                 <a href="{{url_for('home')}}">{{session["username"]}}</a>
                 {%endif%}
             </div>
-            <div class="hmbgr-menu">
-                <i id="hmbrg-menu" class="fas fa-bars"></i>
-            </div>
+
         </nav>
     </header>
     <div class="main-content">
@@ -38,33 +36,33 @@
         </main>
     </div>
     <footer>
+        <div class="contenedor-foo">
+            <div class="logo-footer">
+                <figure>
+                    <img src="{{url_for('static', filename='media/aca-neg.svg')}}" alt="">
+                </figure>
+                <p>Copyrigth ©
+                    <script>document.write("<span>" + new Date().getFullYear() + "</span>")</script> Reciclando. Todos
+                    los derechos reservados. </p>
+            </div>
 
-        <div class="logo-footer">
-            <figure>
-                <img src="{{url_for('static', filename='media/aca-neg.svg')}}" alt="">
-            </figure>
-            <p>Copyrigth © <script>document.write("<span>"+ new Date().getFullYear() + "</span>")</script> Reciclando. Todos los derechos reservados. </p>
+            <div class="secciones">
+                <h1>secciones</h1>
+                <a href="{{url_for('home')}}">Inicio</a>
+                <a href="#dondeLoPongo">¿Donde lo pongo?</a>
+                <a href="{{url_for('geo')}}">Contenedores</a>
+            </div>
+
+            <div class="social-media">
+                <h1>Redes Sociales</h1>
+                <div class="media-buttons">
+                    <a href=""><img src="{{url_for('static', filename='media/github.png')}}" alt=""></a>
+                    <a href=""><img src="{{url_for('static', filename='media/gorjeo.svg')}}" alt=""></a>
+                    <a href=""><img src="{{url_for('static', filename='media/facebook.svg')}}" alt=""></a>
+                    <a href=""><img src="{{url_for('static', filename='media/instagram.svg')}}" alt=""></a>
+                </div>
+            </div>
         </div>
-
-        <div class="secciones">
-            <h1>secciones</h1>
-            <ul>
-                <li><a href="{{url_for('home')}}">Inicio</a></li>
-                <li><a href="#dondeLoPongo">¿Donde lo pongo?</a></li>
-                <li><a href="{{url_for('geo')}}">Contenedores</a></li>
-            </ul>
-        </div>
-
-        <div class="social-media">
-            <h1>Redes Sociales</h1>
-            <ul>
-                <li><a href=""><img src="{{url_for('static', filename='media/github.png')}}" alt=""></a></li>
-                <li><a href=""><img src="{{url_for('static', filename='media/gorjeo.svg')}}" alt=""></a></li>
-                <li><a href=""><img src="{{url_for('static', filename='media/facebook.svg')}}" alt=""></a></li>
-                <li><a href=""><img src="{{url_for('static', filename='media/instagram.svg')}}" alt=""></a></li>
-            </ul>
-        </div>
-
     </footer>
 
 
