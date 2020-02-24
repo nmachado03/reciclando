@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reciclando - {% block tittle_tag %}{%endblock%}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='static/aca-neg.svg') }}">
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css' )}}" />
     <script src="https://kit.fontawesome.com/27ff33fad7.js"></script>
 </head>
@@ -18,7 +19,7 @@
             </div>
             <div class="enlaces">
                 <a href="{{url_for('home')}}">Inicio</a>
-                <a href="{{url_for('geo')}}">Contenedores</a>
+                <a href="{{url_for('map')}}">Contenedores</a>
                 {% if not session["username"] %}
                 <a href="{{url_for('login')}}">Iniciar sesión</a>
                 <a href="{{url_for('signup')}}">Registrarme</a>

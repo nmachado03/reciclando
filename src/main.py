@@ -89,11 +89,11 @@ def logout():
     return redirect(url_for('home'))
 
 
-@app.route("/geo")
+@app.route("/containers")
 def geo():
-    return render_template('geo.html')
+    return render_template('map.html')
 
 
 if __name__ == '__main__':
     db.create_all()
-    app.run(debug=True, port=3000)
+    app.run(debug=True)
