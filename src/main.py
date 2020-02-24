@@ -89,8 +89,8 @@ def logout():
     return redirect(url_for('home'))
 
 
-@app.route("/containers")
-def geo():
+@app.route("/map")
+def map():
     return render_template('map.html')
 
 
