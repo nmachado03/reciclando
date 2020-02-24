@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, escape, redirect, url_for, flash
-from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import Column, Integer, String
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
@@ -89,9 +89,14 @@ def logout():
     return redirect(url_for('home'))
 
 
-@app.route("/map")
+@app.route("/map", methods = [ 'GET', 'POST'])
 def map():
-    return render_template('map.html')
+   # return render_template('map.html')
+
+
+   if request.method == 'POST':
+       return "POst"
+   return render_template('info_containers.html')
 
 
 if __name__ == '__main__':
