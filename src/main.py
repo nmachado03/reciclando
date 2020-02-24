@@ -10,6 +10,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = dbdir
 app.config['SQLALCHEMY_TRACE_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+app.jinja_env.trim_blocks = True
+
 app.secret_key = "123"
 
 class Users(db.Model):
