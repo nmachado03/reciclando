@@ -18,7 +18,7 @@
             </div>
             <div class="enlaces">
                 <a href="{{url_for('home')}}">Inicio</a>
-                <a href="{{url_for('geo')}}">Cerca de mi</a>
+                <a href="{{url_for('geo')}}">Contenedores</a>
                 {% if not session["username"] %}
                 <a href="{{url_for('login')}}">Iniciar sesión</a>
                 <a href="{{url_for('signup')}}">Registrarme</a>
