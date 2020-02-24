@@ -235,12 +235,16 @@ section.form{
     padding-left: 15px;
     color: #a2a2a2;
     outline: none;
+    transition: width 0.4s ease-in-out;
 }
 
 .home-page .box-left .button-home input::placeholder{
     color: #a2a2a2;
 }
 
+.home-page .box-left .button-home input[type=text]:focus {
+    width: 170px;
+}
 
 .home-page .box-right{
     float: right;
