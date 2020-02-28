@@ -1,17 +1,15 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html'  %}
 {% from "_render_elements.html" import render_input %}
-{% block tittle_tag %}
-Signup
-{%endblock%}
+{% block tittle_tag %} Registrarse {% endblock %}
 {% block content %}
-    <section class="form">
-        <h1>Crear cuenta</h1>
-        <form method="POST" action="{{url_for('signup')}}">
-            {{ render_input("username", "Nombre de Usuario") }}
-            {{ render_input("password", "Contraseña", "password") }}
-            {{ render_input("email", "Email") }}
-            <input type="submit" value="Regístrarme">
-        </form>
-        <p>¿Ya tienes una cuenta? <a href="{{url_for('login')}}">Iniciar sesión</a></p>
-    </section>
+<section class="form">
+    <h1>Crear cuenta</h1>
+    <form method="POST" action="{{url_for('signup')}}">
+        {{ render_input("username", "Nombre de Usuario") }}
+        {{ render_input("password", "Contraseña", "password") }}
+        {{ render_input("email", "Email") }}
+        <input type="submit" value="Regístrarme">
+    </form>
+    <p>¿Ya tienes una cuenta? <a href="{{url_for('login')}}">Iniciar sesión</a></p>
+</section>
 {% endblock %}

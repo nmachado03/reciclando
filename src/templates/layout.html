@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reciclando - {% block tittle_tag %}{%endblock%}</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='static/aca-neg.svg') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='static/logo.svg') }}">
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css' )}}" />
     <script src="https://kit.fontawesome.com/27ff33fad7.js"></script>
 </head>
@@ -15,11 +15,11 @@
     <header>
         <nav class="contenedor">
             <div class="logo">
-                <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='media/aca-neg.svg')}}" alt=""></a>
+                <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='media/logo.svg')}}" alt=""></a>
             </div>
             <div class="enlaces">
                 <a href="{{url_for('home')}}">Inicio</a>
-                <a href="{{url_for('map')}}">Contenedores</a>
+                <a href="{{url_for('containers')}}">Contenedores</a>
                 {% if not session["username"] %}
                 <a href="{{url_for('login')}}">Iniciar sesión</a>
                 <a href="{{url_for('signup')}}">Registrarme</a>
@@ -40,7 +40,7 @@
         <div class="contenedor-foo">
             <div class="logo-footer">
                 <figure>
-                    <img src="{{url_for('static', filename='media/aca-neg.svg')}}" alt="">
+                    <img src="{{url_for('static', filename='media/logo.svg')}}" alt="">
                 </figure>
                 <p>Copyrigth ©
                     <script>document.write("<span>" + new Date().getFullYear() + "</span>")</script> Reciclando. Todos
@@ -51,7 +51,7 @@
                 <h1>secciones</h1>
                 <a href="{{url_for('home')}}">Inicio</a>
                 <a href="#dondeLoPongo">¿Donde lo pongo?</a>
-                <a href="{{url_for('map')}}">Contenedores</a>
+                <a href="{{url_for('containers')}}">Contenedores</a>
             </div>
 
             <div class="social-media">
