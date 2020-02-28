@@ -1,0 +1,31 @@
+{% extends 'layout.html'  %}
+{% block tittle_tag %} Info Contenedores {% endblock %}
+{% block content %}
+    <form action="{{url_for('containers')}}" method="post">
+        <label for="ccz">Elige tu codigo zonal</label>
+        <select name="ccz" id="ccz">
+            {% for ccz in listCCZ %}
+                <option value="{{ ccz }}">{{ ccz }}</option>
+            {%endfor%}
+        </select>
+        <label for="nombre_con">Elige el tipo de residuo</label>
+        <select name="nombre_con" id="nombre_con">
+            {% for nombre_con in listNOMBRE_CON %}
+                <option value="{{ nombre_con }}">{{ nombre_con }}</option>
+            {%endfor%}
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <div>
+        <ul>
+            {% for result in resultados%}
+                <li>{{ result.DIRECCION}}</li>
+            {%endfor%}
+        </ul>
+    </div>
+ 
+
+{% endblock %}
