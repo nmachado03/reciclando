@@ -31,6 +31,9 @@
 
         </nav>
     </header>
+    <section>
+        {{ render_messages(messages) }}
+    </section>
     <div class="main-content">
         <main>
             {% block content %} {%endblock%}
@@ -50,7 +53,7 @@
             <div class="secciones">
                 <h1>secciones</h1>
                 <a href="{{url_for('home')}}">Inicio</a>
-                <a href="#dondeLoPongo">¿Donde lo pongo?</a>
+                <a href="/home#dondeLoPongo">¿Donde lo pongo?</a>
                 <a href="{{url_for('containers')}}">Contenedores</a>
             </div>
 
@@ -67,7 +70,7 @@
     </footer>
 
 
-    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <!-- <script src="{{url_for('static', filename='js/main.js')}}"></script> -->
 </body>
 
 </html>

@@ -119,12 +119,20 @@ footer div.social-media img{
 
 /* Flash Messages */
 
-section ul li.error{
-    color: #c0392b;
+section .flash-message{
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    padding-top: 2px;
 }
 
-section ul li.acierto{
-    color: #27ae60;
+section .flash-message.alert-error{
+    background-color: #c0392b;
+}
+
+section .flash-message.alert-acierto{
+    background-color: #27ae60;
 }
 
 /* Forms */
@@ -186,6 +194,7 @@ section.form{
 .main-content{
     width: 1160px;
     margin: 0 auto;
+    min-height: 80vh;
 }
 
 

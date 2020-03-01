@@ -1,6 +1,6 @@
 import os
 
-secret_key = '123'
+SECRET_KEY = '123'
 
 DEBUG = True
 SQLALCHEMY_DATABASE_URI = 'sqlite:///contenedores.sqlite'
