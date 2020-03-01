@@ -1,7 +1,7 @@
 from sqlalchemy import Boolean, Column , ForeignKey
 from sqlalchemy import DateTime, Integer, String, Text, Float
 from sqlalchemy.orm import relationship
-from src.app import db
+from src import db
 
 
 class Containers(db.Model):

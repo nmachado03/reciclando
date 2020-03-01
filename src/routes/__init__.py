@@ -1,17 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session, escape, abort
-from . import config
-from flask_sqlalchemy import SQLAlchemy
+from src import app, db
+from flask import render_template, request, redirect, url_for, flash, session, escape, abort
 from werkzeug.security import generate_password_hash, check_password_hash
-
-
-app = Flask(__name__)
-app.config.from_object(config)
-db = SQLAlchemy(app)
-
-
-from src.models import Containers, Users
-
-
+from src.schemas.models import Containers, Users
 
 @app.route("/")
 @app.route("/home")
@@ -92,7 +82,3 @@ def edit_user():
 @app.errorhandler(404)
 def page_not_fpund(err):
     return render_template('page_not_found.html'), 404
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
