@@ -56,10 +56,7 @@ def containers():
     if request.method == 'POST':
         ccz = request.form["ccz"]
         nombre_con = request.form["nombre_con"]
-        resultados = Containers.query.filter_by(
-            CCZ=ccz).filter_by(NOMBRE_CON=nombre_con).first()
-        return render_template('containers.html', direcciones= resultados.DIRECCION)
-        
+        return redirect(url_for('result', ccz = ccz, nombre_con = nombre_con))
     else:
         listCCZ = []
         listNOMBRE_CON = []
@@ -69,7 +66,13 @@ def containers():
             if not container.NOMBRE_CON in listNOMBRE_CON:
                 listNOMBRE_CON.append(container.NOMBRE_CON)
         listCCZ.sort()
-        return render_template('containers.html', listCCZ=listCCZ)
+        return render_template('containers.html', listCCZ=listCCZ, listNOMBRE_CON  = listNOMBRE_CON )
+
+@app.route("/result/<ccz>/<nombre_con>")
+def result(ccz, nombre_con):
+    results = Containers.query.filter_by(CCZ=ccz).filter_by(NOMBRE_CON=nombre_con).limit(10).all()
+    return render_template('result.html', results = results)
+
 
 @app.route("/edit_user")
 def edit_user():

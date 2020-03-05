@@ -1,0 +1,13 @@
+{%extends 'layout.html'%}
+{% block tittle_tag %}Resultado{% endblock %}
+{% block content %}
+    {% if results %}
+        <ul>
+            {% for result in results %}
+            <li>{{ result.DIRECCION }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>NO se encontraron resultados</p>
+    {% endif %}    
+{% endblock %}
