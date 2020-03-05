@@ -12,7 +12,7 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class ProductionConfig(Config):
-    SECRET_KEY = os.environ["SECRET_KEY"]
+    #SECRET_KEY = os.environ["SECRET_KEY"]
     SQLALCHEMY_DATABASE_URI = 'sqlite:///../src/contenedores.sqlite'
     SQLALCHEMY_BINDS = {
         'Containers': SQLALCHEMY_DATABASE_URI,

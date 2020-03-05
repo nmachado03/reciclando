@@ -3,8 +3,8 @@
 {% block tittle_tag %} Registrarse {% endblock %}
 {% block content %}
 <section class="form">
-    <h1>Crear cuenta</h1>
     <form method="POST" action="{{url_for('signup')}}">
+        <h1>Crear cuenta</h1>
         {{ render_input("username", "Nombre de Usuario") }}
         {{ render_input("password", "Contraseña", "password") }}
         {{ render_input("email", "Email") }}

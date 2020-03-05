@@ -136,7 +136,6 @@ section .flash-message.alert-acierto{
 }
 
 /* Forms */
-
 .form a{
     text-decoration: none;
     color: #000;
@@ -148,7 +147,9 @@ section.form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
+
 
 .form input{
     min-width:300px;
@@ -158,9 +159,15 @@ section.form{
     font-size: 18px;
     font-weight: 400;
     border-width: 0 0 2px 0;
-    border-color: #b9b9b9 ;
+    border-color: #37b24d ;
     outline: none;
     transition: border-color 0.25s;
+}
+
+.form input[type="submit"]{
+    border-radius: 10px;
+    background-color: #2d69b2;
+    color: #fff;
 }
 
 .form input:focus{
@@ -176,18 +183,28 @@ section.form{
 }
 
 
+/* Containers Form */
 
-/* Map */
-
-.contenedor-map{
-    height: 100vh;
-    width: 100%;
+section.form-containers form{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #2d69b2;
 }
 
-.map{
-    height: 100%;
-    width: 100% ;
+.form-containers form input{
+    margin: 2px;
 }
+
+.form-containers form figure img{
+    height: auto;
+    width: 15px;
+}
+
+.form-containers form input[type="submit"]{
+    display: none;
+}
+
 
 /*Home*/
 
@@ -251,9 +268,7 @@ section.form{
     color: #a2a2a2;
 }
 
-.home-page .box-left .button-home input[type=text]:focus {
-    width: 170px;
-}
+
 
 .home-page .box-right{
     float: right;

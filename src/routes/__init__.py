@@ -58,7 +58,8 @@ def containers():
         nombre_con = request.form["nombre_con"]
         resultados = Containers.query.filter_by(
             CCZ=ccz).filter_by(NOMBRE_CON=nombre_con).first()
-        return "" + resultados.DIRECCION + ""
+        return render_template('containers.html', direcciones= resultados.DIRECCION)
+        
     else:
         listCCZ = []
         listNOMBRE_CON = []
@@ -68,8 +69,7 @@ def containers():
             if not container.NOMBRE_CON in listNOMBRE_CON:
                 listNOMBRE_CON.append(container.NOMBRE_CON)
         listCCZ.sort()
-        return render_template('containers.html', listCCZ=listCCZ, listNOMBRE_CON=listNOMBRE_CON)
-
+        return render_template('containers.html', listCCZ=listCCZ)
 
 @app.route("/edit_user")
 def edit_user():

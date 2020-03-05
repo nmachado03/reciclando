@@ -3,8 +3,8 @@
 {% block tittle_tag %} Iniciar sesion {% endblock %}
 {% block content %}
 <section class="form">
-    <h1>Iniciar sesión</h1>
     <form method="POST" action="{{ url_for('login')}}">
+        <h1>Iniciar sesión</h1>
         {{ render_input("username", "Nombre de Usuario") }}
         {{ render_input("password", "Contraseña", "password") }}
         <input type="submit" value="Ingresar">

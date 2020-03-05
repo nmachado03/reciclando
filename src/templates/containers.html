@@ -1,6 +1,7 @@
 {% extends 'layout.html'  %}
 {% block tittle_tag %} Info Contenedores {% endblock %}
 {% block content %}
+<section class="form-containers">
     <form action="{{url_for('containers')}}" method="post">
         <label for="ccz">Elige tu codigo zonal</label>
         <select name="ccz" id="ccz">
@@ -14,16 +15,14 @@
                 <option value="{{ nombre_con }}">{{ nombre_con }}</option>
             {%endfor%}
         </select>
-
-        <input type="submit" value="Submit">
+        <label for="submit"> <figure> <img src="{{ url_for('static', filename = 'media/lupa.svg')}}" alt=""></figure> </label>
+        <input id="submit" type="submit">
     </form>
 
-
+</section>
     <div>
         <ul>
-            {% for result in resultados%}
-                <li>{{ result.DIRECCION}}</li>
-            {%endfor%}
+                <li>{{ direcciones }}</li>
         </ul>
     </div>
  
