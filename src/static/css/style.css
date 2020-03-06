@@ -185,20 +185,55 @@ section.form{
 
 /* Containers Form */
 
-section.form-containers form{
+section.form-containers{
+    width: 100%;
+    height: 80vh;
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    background-color: #2d69b2;
+    align-items: center;
+    flex-direction: column;
 }
 
-.form-containers form input{
-    margin: 2px;
+section.form-containers form{
+    height: auto;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+}
+
+section.form-containers form .serch-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: #848484;
+    padding: 10px 20px ;
+}
+
+.form-containers form select{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #848484;
+}
+
+.form-containers form select:first-child{
+    border-right: 1px solid #ccc;
+}
+
+.form-containers form label[for="submit"]{
+    width: 45px;
+    background-color: #58940ada;
+    border-radius: 100px;
+    padding-left: 6px;
+    padding-top: 4px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3) ;
+    
 }
 
 .form-containers form figure img{
     height: auto;
-    width: 15px;
+    width: 30px;
 }
 
 .form-containers form input[type="submit"]{

@@ -1,24 +1,30 @@
 {% extends 'layout.html'  %}
 {% block tittle_tag %} Info Contenedores {% endblock %}
 {% block content %}
+
 <section class="form-containers">
+    <h1>Puedes buscar un contenedor serca de ti</h1>
     <form action="{{url_for('containers')}}" method="post">
-        <label for="ccz">Elige tu codigo zonal</label>
-        <select name="ccz" id="ccz">
-            {% for ccz in listCCZ %}
+        <div class="serch-form">
+            <label for="ccz">Elige tu codigo zonal:</label>
+            <select name="ccz" id="ccz">
+                {% for ccz in listCCZ %}
                 <option value="{{ ccz }}">{{ ccz }}</option>
-            {%endfor%}
-        </select>
-        <label for="nombre_con">Elige el tipo de residuo</label>
-        <select name="nombre_con" id="nombre_con">
-            {% for nombre_con in listNOMBRE_CON %}
+                {%endfor%}
+            </select>
+            <label for="nombre_con">Elige el tipo de residuo:</label>
+            <select name="nombre_con" id="nombre_con">
+                {% for nombre_con in listNOMBRE_CON %}
                 <option value="{{ nombre_con }}">{{ nombre_con }}</option>
-            {%endfor%}
-        </select>
-        <label for="submit"> <figure> <img src="{{ url_for('static', filename = 'media/lupa.svg')}}" alt=""></figure> </label>
-        <input id="submit" type="submit">
+                {%endfor%}
+            </select>
+            <label for="submit">
+                <figure> <img src="{{ url_for('static', filename = 'media/lupa.svg')}}" alt=""></figure>
+            </label>
+            <input id="submit" type="submit">
+        </div>
     </form>
 
-</section> 
+</section>
 
 {% endblock %}
